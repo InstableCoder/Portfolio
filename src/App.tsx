@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Particles from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 import { tsParticles } from '@tsparticles/engine';
@@ -17,19 +17,10 @@ import {
   FaDocker
 } from 'react-icons/fa';
 import { SiJenkins, SiC } from 'react-icons/si';
-import { ChevronDown, Terminal, Coffee, Wrench } from 'lucide-react';
+import { ChevronDown, Coffee, Wrench } from 'lucide-react';
 
 function App() {
   const [particlesInit, setParticlesInit] = useState(false);
-  const [currentCommand, setCurrentCommand] = useState(0);
-  const [typedText, setTypedText] = useState('');
-  const [isTyping, setIsTyping] = useState(true);
-
-  const taglines = [
-    "#!/ Hello world, I'm building automation pipelines",
-    "#!/ DevOps enthusiast simplifying deployments",
-    "#!/ Containerizing the future, one app at a time"
-  ];
 
   const terminalCommands = [
     "$ docker build -t myapp .",
